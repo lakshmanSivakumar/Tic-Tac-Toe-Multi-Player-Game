@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Tic-Tac-Toe Multi Player Game</title>
+</head>
+
+<body>
+    <div class="flex-container">
+        <h1 class="title">Tic-tac-toe</h1>
+        <div class="choose">
+            <span>CHOOSE</span>
+            <input type="button" onclick="player('X')" value="X">
+            <span>or</span>
+            <input type="button" onclick="player('O')" value="O">
+        </div>
+        <div class="x-wins">
+            <h1>!!! x Wins !!!</h1>
+        </div>
+        <div class="o-wins">
+            <h1>!!! o Wins !!!</h1>
+        </div>
+        <div class="draw">
+            <h1>Draw</h1>
+        </div>
+        <div class="wrapper">
+            <div class="line">
+                <div class="rowStrikeLine">
+                    <p class="r1"></p>
+                    <p class="r2"></p>
+                    <p class="r3"></p>
+                </div>
+                <div class="columnStrikeLine">
+                    <p class="c1"></p>
+                    <p class="c2"></p>
+                    <p class="c3"></p>
+                </div>
+                <div class="diagonalStrikeLine">
+                    <p class="d1"></p>
+                    <p class="d2"></p>
+                </div>
+            </div>
+            <div class="board" id="r1c1" onmouseover="show(1)" onmouseout="hide(1)" onclick="game(1)">
+                <p id="t1"></p>
+                <p id="t2"></p>
+            </div>
+            <div class="board" id="r1c2" onmouseover="show(2)" onmouseout="hide(2)" onclick="game(2)">
+                <p id="t1"></p>
+                <p id="t2"></p>
+            </div>
+            <div class="board" id="r1c3" onmouseover="show(3)" onmouseout="hide(3)" onclick="game(3)">
+                <p id="t1"></p>
+                <p id="t2"></p>
+            </div>
+            <div class="board" id="r2c1" onmouseover="show(4)" onmouseout="hide(4)" onclick="game(4)">
+                <p id="t1"></p>
+                <p id="t2"></p>
+            </div>
+            <div class="board" id="r2c2" onmouseover="show(5)" onmouseout="hide(5)" onclick="game(5)">
+                <p id="t1"></p>
+                <p id="t2"></p>
+            </div>
+            <div class="board" id="r2c3" onmouseover="show(6)" onmouseout="hide(6)" onclick="game(6)">
+                <p id="t1"></p>
+                <p id="t2"></p>
+            </div>
+            <div class="board" id="r3c1" onmouseover="show(7)" onmouseout="hide(7)" onclick="game(7)">
+                <p id="t1"></p>
+                <p id="t2"></p>
+            </div>
+            <div class="board" id="r3c2" onmouseover="show(8)" onmouseout="hide(8)" onclick="game(8)">
+                <p id="t1"></p>
+                <p id="t2"></p>
+            </div>
+            <div class="board" id="r3c3" onmouseover="show(9)" onmouseout="hide(9)" onclick="game(9)">
+                <p id="t1"></p>
+                <p id="t2"></p>
+            </div>
+        </div>
+    </div>
+</body>
+
+<footer>
+    Coded by Lakshman Sivakumar
+</footer>
+
+<script src="2player.js"></script>
+
+</html>

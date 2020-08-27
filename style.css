@@ -1,0 +1,187 @@
+* {
+    box-sizing: border-box;
+}
+
+p {
+    margin: 0;
+}
+
+body {
+    font-family: 'Major Mono Display', monospace;
+    background-color: rgb(250, 250, 250);
+    margin: 0;
+}
+
+.flex-container {
+    min-width: 250px;
+    min-height: 300px;
+    height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    color: teal;
+}
+
+.choose {
+    font-family: 'Ubuntu Mono', monospace;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.choose > input {
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.x-wins, .o-wins, .draw {
+    display: none;
+}
+
+h1 {
+    color: goldenrod;
+}
+
+.wrapper {
+    width: 240px;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-auto-rows: 70px;
+    gap: 3px;
+    background-color: teal;
+    border: 3px solid teal;
+    border-radius: 3px;
+}
+
+.board {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: teal;
+    background-color: white;
+    text-align: center;
+}
+
+.board:hover {
+    background-color: teal;
+    color: white;
+}
+
+.wrapper {
+    display: none;
+}
+
+.line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: none;
+}
+
+.rowStrikeLine {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+}
+
+.r1, .r2, .r3 {
+    visibility: hidden;
+    position: relative;
+    left: 10%;
+    width: 80%;
+    height: 2px;
+    background-color: black;
+    animation: r 1s linear;
+    opacity: 0.5;
+}
+
+@keyframes r {
+  from {width: 0;}
+  to {width: 80%;}
+}
+
+.columnStrikeLine {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.c1, .c2, .c3 {
+    visibility: hidden;
+    position: relative;
+    top: 10%;
+    width: 2px;
+    height: 80%;
+    background-color: black;
+    animation: col 1s linear;
+    opacity: 0.5;
+}
+
+@keyframes col {
+  from {height: 0;}
+  to {height: 80%;}
+}
+
+.diagonalStrikeLine {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.d1 {
+    visibility: hidden;
+    transform: rotate(135deg);
+    width: 2px;
+    height: 110%;
+    background-color: black;
+    animation: dia 1s linear;
+    opacity: 0.5;
+}
+
+.d2 {
+    visibility: hidden;
+    transform: rotate(45deg);
+    width: 2px;
+    height: 110%;
+    background-color: black;
+    animation: dia 1s linear;
+    opacity: 0.5;
+}
+
+@keyframes dia {
+  from {height: 0;}
+  to {height: 110%;}
+}
+
+footer {
+    font-family: 'Ubuntu Mono', monospace;
+    color: teal;
+    font-weight: 700;
+    font-size: 8px;
+    text-align: center;
+    letter-spacing: 2px;
+    margin: 20px 0px;
+}
